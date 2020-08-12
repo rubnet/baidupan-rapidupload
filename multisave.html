@@ -181,7 +181,7 @@ saveForm.submit();
 
 </div>
 <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 text-center">
-<p><input class="form-control" id="copy_script" value="javascript:for(i=0;i < document.getElementsByTagName('script').length;i++){var scripts=document.getElementsByTagName('script')[i].innerHTML.match(/\&quot;bdstoken\&quot;\:\&quot;(\w{32})\&quot;/);if(scripts!=null){var bdstoken=scripts[0].match(/\&quot;bdstoken\&quot;\:\&quot;(\w{32})\&quot;/)[1];}}const input=document.createElement('input');document.body.appendChild(input);input.setAttribute('value',bdstoken);input.select();if(document.execCommand('copy')){document.execCommand('copy');alert('bdstoken '+bdstoken+'\n复制成功');}document.body.removeChild(input);">
+<p><input class="form-control" id="copy_script" value="javascript:for(i=0;i < document.getElementsByTagName('script').length;i++){var scripts=document.getElementsByTagName('script')[i].innerHTML.match(/\'bdstoken\'\, \'(\w{32})\'/);if(scripts!=null){var bdstoken=scripts[0].match(/\'bdstoken\'\, \'(\w{32})\'/)[1];}}const input=document.createElement('input');document.body.appendChild(input);input.setAttribute('value',bdstoken);input.select();if(document.execCommand('copy')){document.execCommand('copy');alert('bdstoken '+bdstoken+'\n复制成功');}document.body.removeChild(input);">
 </p>
 <button class="btn btn-primary" id="copy" onclick=copy();>复制代码</button>
 
