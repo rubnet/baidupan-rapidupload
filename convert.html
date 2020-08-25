@@ -41,7 +41,7 @@ var de_b64 = atou(bdpan[1]);
 var md5 = de_b64.match(/\|(.{32})\|/)[1];
 var slicemd5 = de_b64.match(/\|([^\|]{32})$/)[1];
 var file_length = de_b64.match(/\|([0-9]+)\|/)[1];
-var file_name = de_b64.match(/^(.+\.[a-zA-Z]{1,9})\|/)[1];
+var file_name = de_b64.match(/^(.+?)\|/)[1];
 backcall(md5, slicemd5, file_length, file_name);
 }
 else if (pcs){
