@@ -89,6 +89,10 @@ return 'BaiduPCS-Go rapidupload -length=' + file_length + ' -md5=' + md5 + ' -sl
 	document.getElementById('convert').innerHTML += md5 + '#'+slicemd5+'#'+file_length+'#'+file_name+ '\n';
 	});
 	}
+	if (document.getElementById('189').className == 'btn btn-outline-primary active'){
+	getLink(lines[i],backcall = function(md5, slicemd5, file_length, file_name){
+	document.getElementById('convert').innerHTML += './cloudpan189-go rapidupload -size=' + file_length + ' -md5=' + md5 + ' \"\/test\/' + file_name + '\"' + '\n';
+	});
 }
 	}
 	</script>
@@ -123,6 +127,9 @@ return 'BaiduPCS-Go rapidupload -length=' + file_length + ' -md5=' + md5 + ' -sl
         </label>
         <label class="btn btn-outline-primary" id="mengji">
             <input  type="radio" style="display:none;" id="mengji" name="options"> 梦姬
+        </label>
+	<label class="btn btn-outline-primary active" id="189">
+            <input type="radio" style="display:none;" id="189" name="options" checked=""> Cloudpan189-Go
         </label>
     </div>
 	<p><button class="btn btn-primary" onclick="convert();">转换</button>
